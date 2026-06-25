@@ -1,0 +1,271 @@
+<!-- اصححححححححححححححححححححححححححح ميتوووووووووووووووووووووو
+             js متنساش تغير الرقم في فايل ال 
+                    متنساش تعدل الفووتر 
+  اصححححححححححححححححححححححححححح ميتوووووووووووووووووووووو-->
+
+
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="صيانة وتركيب تكييفات في القاهرة بأفضل الأسعار - الايطالية">
+    <title>الايطالية</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+
+
+</head>
+
+<body>
+
+    <!-- Language Toggle -->
+    <div class="lang-toggle">
+        <button class="lang-btn active" data-lang="ar">ع</button>
+        <button class="lang-btn" data-lang="en">En</button>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <h2>❄️ <span>الايطالية</span></h2>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#hero" class="nav-link">الرئيسية</a></li>
+                <li><a href="#booking" class="nav-link">حجز</a></li>
+                <li><a href="#services" class="nav-link">الخدمات</a></li>
+                <li><a href="#contact" class="nav-link">تواصل</a></li>
+            </ul>
+
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">تبريد منزلك بأفضل الأسعار</h1>
+            <p class="hero-description">فك وتركيب ، خدمة صيانه سريعه وموثوقة</p>
+            <div class="hero-buttons">
+                <button class="btn btn-primary" onclick="scrollToBooking()">احجز الآن</button>
+                <button class="btn btn-secondary" onclick="makeCall()">اتصل الآن</button>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Booking Section -->
+    <section id="booking" class="booking">
+        <div class="container">
+            <h2 class="section-title">احجز موعد صيانة</h2>
+            <div class="booking-container">
+                <form id="bookingForm" class="booking-form">
+                    <div class="form-group">
+                        <label>الاسم</label>
+                        <input type="text" id="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label>رقم الهاتف</label>
+                        <input type="tel" id="phone" pattern="01[0-9]{9}" required>
+                    </div>
+                    <div class="form-group">
+                        <label>العنوان</label>
+                        <textarea id="address" required></textarea>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>نوع التكييف</label>
+                            <select id="acType">
+                                <option value="">اختر نوع التكييف</option>
+                                <option value="سبليت">سبليت</option>
+                                <option value="شباك">شباك</option>
+                                <option value="مركزي">مركزي</option>
+                                <option value="أخرى">أخرى</option>
+                            </select>
+                        </div>
+
+                    </div>
+                    <button type="submit" class="btn btn-primary full-width" id="submitBtn">
+                        <span class="btn-text">احجز الآن</span>
+                        <span class="loading">جاري الحجز...</span>
+                    </button>
+                </form>
+                <div id="successMessage" class="success-message hidden">
+                    ✅ تم الحجز بنجاح! سنتواصل معك قريباً
+                </div>
+                <div id="errorMessage" class="error-message hidden">
+                    ❌ حدث خطأ، حاول مرة أخرى
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title">آراء عملائنا</h2>
+
+            <!-- Row 1 -->
+            <div class="testimonial-row row1">
+                <div class="testimonial-track">
+
+                    <!-- ORIGINAL -->
+                    <div class="testimonial-card">خدمة ممتازة وسريعة جداً 👌</div>
+                    <div class="testimonial-card">ناس محترمة والتعامل راقي ❤️</div>
+                    <div class="testimonial-card">ركبولي التكييف في نفس اليوم 🔥</div>
+                    <div class="testimonial-card">أسعارهم مناسبة جداً 💰</div>
+                    <div class="testimonial-card">فنيين شاطرين جداً 👨‍🔧</div>
+                    <div class="testimonial-card">التكييف بقى زي الجديد ❄️</div>
+                    <div class="testimonial-card">سرعة في التنفيذ 💨</div>
+                    <div class="testimonial-card">خدمة عملاء ممتازة 📞</div>
+
+                    <!-- COPY 1 -->
+                    <div class="testimonial-card">خدمة ممتازة وسريعة جداً 👌</div>
+                    <div class="testimonial-card">ناس محترمة والتعامل راقي ❤️</div>
+                    <div class="testimonial-card">ركبولي التكييف في نفس اليوم 🔥</div>
+                    <div class="testimonial-card">أسعارهم مناسبة جداً 💰</div>
+                    <div class="testimonial-card">فنيين شاطرين جداً 👨‍🔧</div>
+                    <div class="testimonial-card">التكييف بقى زي الجديد ❄️</div>
+                    <div class="testimonial-card">سرعة في التنفيذ 💨</div>
+                    <div class="testimonial-card">خدمة عملاء ممتازة 📞</div>
+
+                    <!-- COPY 2 -->
+                    <div class="testimonial-card">خدمة ممتازة وسريعة جداً 👌</div>
+                    <div class="testimonial-card">ناس محترمة والتعامل راقي ❤️</div>
+                    <div class="testimonial-card">ركبولي التكييف في نفس اليوم 🔥</div>
+                    <div class="testimonial-card">أسعارهم مناسبة جداً 💰</div>
+                    <div class="testimonial-card">فنيين شاطرين جداً 👨‍🔧</div>
+                    <div class="testimonial-card">التكييف بقى زي الجديد ❄️</div>
+                    <div class="testimonial-card">سرعة في التنفيذ 💨</div>
+                    <div class="testimonial-card">خدمة عملاء ممتازة 📞</div>
+
+                </div>
+            </div>
+
+            <!-- Row 2 -->
+            <div class="testimonial-row row2">
+                <div class="testimonial-track">
+
+                    <!-- ORIGINAL -->
+                    <div class="testimonial-card">أفضل شركة تعاملت معاها 👏</div>
+                    <div class="testimonial-card">جودة شغل عالية جداً 💯</div>
+                    <div class="testimonial-card">التزام بالمواعيد 🔥</div>
+                    <div class="testimonial-card">أنصح بيهم جداً 👍</div>
+                    <div class="testimonial-card">أسعار واضحة بدون مفاجآت 💵</div>
+                    <div class="testimonial-card">خدمة سريعة وفي نفس اليوم ⚡</div>
+                    <div class="testimonial-card">تعامل محترف جداً 👌</div>
+                    <div class="testimonial-card">هتعامل معاهم تاني أكيد 🔁</div>
+
+                    <!-- COPY 1 -->
+                    <div class="testimonial-card">أفضل شركة تعاملت معاها 👏</div>
+                    <div class="testimonial-card">جودة شغل عالية جداً 💯</div>
+                    <div class="testimonial-card">التزام بالمواعيد 🔥</div>
+                    <div class="testimonial-card">أنصح بيهم جداً 👍</div>
+                    <div class="testimonial-card">أسعار واضحة بدون مفاجآت 💵</div>
+                    <div class="testimonial-card">خدمة سريعة وفي نفس اليوم ⚡</div>
+                    <div class="testimonial-card">تعامل محترف جداً 👌</div>
+                    <div class="testimonial-card">هتعامل معاهم تاني أكيد 🔁</div>
+
+                    <!-- COPY 2 -->
+                    <div class="testimonial-card">أفضل شركة تعاملت معاها 👏</div>
+                    <div class="testimonial-card">جودة شغل عالية جداً 💯</div>
+                    <div class="testimonial-card">التزام بالمواعيد 🔥</div>
+                    <div class="testimonial-card">أنصح بيهم جداً 👍</div>
+                    <div class="testimonial-card">أسعار واضحة بدون مفاجآت 💵</div>
+                    <div class="testimonial-card">خدمة سريعة وفي نفس اليوم ⚡</div>
+                    <div class="testimonial-card">تعامل محترف جداً 👌</div>
+                    <div class="testimonial-card">هتعامل معاهم تاني أكيد 🔁</div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title">خدماتنا</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🔧</div>
+                    <h3>صيانة دورية</h3>
+                    <p>صيانة شاملة لجميع أنواع التكييف</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">⚙️</div>
+                    <h3>فك وتركيب </h3>
+                    <p>تركيب احترافي بأحدث الأجهزة</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🔍</div>
+                    <h3>تشخيص أعطال</h3>
+                    <p>كشف وإصلاح الأعطال بسرعة</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">تواصل معنا</h2>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <div class="contact-icon">📞</div>
+                    <div>
+                        <h3>هاتف</h3>
+                        <a href="tel:+201005001739">01005001739</a>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">📍</div>
+                    <div>
+                        <h3>العنوان</h3>
+                        <p>القاهرة - مصرالجديده</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon"> <strong>f</strong> </div>
+                    <div>
+                        <h3>الفيسبوك</h3>
+                        <a href="https://web.facebook.com/profile.php?id=100063668186224" target="_blank">الايطالية
+                            للتكييف</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 م/ محمد هنداوي للتكييف والتبريد جميع الحقوق محفوظة. </p>
+            <div class="footer-moataz">Developed by<a href="https://moatazelsayed1.netlify.app/" class="dev-link"
+                    target="_blank"><strong> Moataz ElSayed</strong></div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp -->
+    <a href="https://wa.me/201005001739" class="whatsapp-float" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+    </a>
+
+    <!-- Click to Call -->
+    <a href="tel:+201005001739" class="call-float">
+        <div class="call-icon">📞</div>
+    </a>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
